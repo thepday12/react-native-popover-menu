@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:padding="16dp"
+   >
+    <RelativeLayout
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp">
+        <EditText
+            android:id="@+id/etTime"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Thời gian thay đổi"
+            android:imeOptions="actionDone"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btSetTime"
+            android:layout_marginRight="16dp"
+            />
+        <Button
+            android:id="@+id/btSetTime"
+            android:background="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cập nhật"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorWhite"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/etCopy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập nội dung muốn copy"
+        android:imeOptions="actionDone"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btRun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chạy tự đông copy"
+            android:background="@color/colorGray"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginRight="16dp"/>
+    <Button
+        android:id="@+id/btAdd"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm nội dung copy mới"
+        android:textColor="@color/colorWhite"
+        />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvCopy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btClear"
+        android:layout_marginBottom="16dp"
+        android:scrollbars="vertical" />
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btClear"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xoá toàn bộ nội dung"
+        android:textColor="@color/colorWhite"
+        />
+    </RelativeLayout>
+</LinearLayout>
